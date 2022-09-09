@@ -1,0 +1,22 @@
+[mysql]
+host = "127.0.0.1"
+port = 3306
+username = "root"
+password = "123456"
+config = "charset=utf8mb4&parseTime=True&loc=Local"
+dbName = "letter"
+maxIdleConns = 10
+maxOpenConns = 20
+
+[log]
+path = "logs/letter.log"
+level = "debug"
+
+[run]
+mode = "release"
+httpAddr = ":8085"
+websocketAddr = ":8086"
+
+[jwt]
+privateKey = "cf7a4d77e777b960edd996c7410c7704cb3b06dd94344275fcfa7a474dbd572e"
+publicKey = "035463d712ef4a9ffe48040eedfe86bf3203123d89c40f676149bb521949302db2"

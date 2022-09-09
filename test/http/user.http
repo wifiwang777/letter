@@ -1,0 +1,22 @@
+###
+
+### Register
+POST localhost:8085/user/register
+Content-Type: application/json
+
+{
+  "name": "wf",
+  "password": "123456"
+}
+
+### Login
+POST localhost:8085/user/login
+Content-Type: application/json
+
+{
+  "name": "wf",
+  "password": "123456"
+}
+
+
+###

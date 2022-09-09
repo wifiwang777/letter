@@ -1,0 +1,9 @@
+2022-09-08 19:17:04.850569	INFO	log/logger.go:58	logger init success
+2022-09-08 19:17:10.407377	DEBUG	controller/user.go:14	user models.User{UID:0x0, Name:"wf", Password:"123456"}
+2022-09-08 19:17:10.419150	DEBUG	service/user.go:21	e10adc3949ba59abbe56e057f20f883e
+2022-09-08 19:21:15.711519	INFO	log/logger.go:58	logger init success
+2022-09-08 19:21:18.359033	DEBUG	controller/user.go:14	user models.User{UID:0x0, Name:"wf", Password:"123456"}
+2022-09-08 19:21:39.793613	INFO	log/logger.go:58	logger init success
+2022-09-08 19:22:12.755241	DEBUG	controller/user.go:14	user models.User{UID:0x0, Name:"wf", Password:"123456"}
+2022-09-08 19:22:17.677343	DEBUG	controller/user.go:14	user models.User{UID:0x0, Name:"wf", Password:"123456"}
+2022-09-08 19:22:40.365187	DEBUG	controller/user.go:14	user models.User{UID:0x0, Name:"wf", Password:"123456"}
