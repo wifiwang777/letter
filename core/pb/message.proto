@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package pb;
+option go_package = "/;pb";
+
+message Message {
+  string from = 1;
+  string to = 2;
+  uint32 type = 3;
+  string content = 4;
+}

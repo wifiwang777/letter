@@ -7,3 +7,462 @@
 2022-09-08 19:22:12.755241	DEBUG	controller/user.go:14	user models.User{UID:0x0, Name:"wf", Password:"123456"}
 2022-09-08 19:22:17.677343	DEBUG	controller/user.go:14	user models.User{UID:0x0, Name:"wf", Password:"123456"}
 2022-09-08 19:22:40.365187	DEBUG	controller/user.go:14	user models.User{UID:0x0, Name:"wf", Password:"123456"}
+2022-09-13 13:23:45.773905	INFO	log/logger.go:58	logger init success
+2022-09-13 13:26:16.066689	ERROR	ws/server.go:69	invalid user
+2022-09-13 13:30:41.827257	INFO	log/logger.go:58	logger init success
+2022-09-13 13:31:59.801352	INFO	log/logger.go:58	logger init success
+2022-09-13 13:32:05.808370	INFO	ws/server.go:37	user wf access
+2022-09-13 13:32:10.809967	ERROR	ws/server.go:53	proto: cannot parse invalid wire-format data
+2022-09-13 13:32:15.809690	ERROR	ws/server.go:53	proto: cannot parse invalid wire-format data
+2022-09-13 14:18:15.054426	INFO	log/logger.go:58	logger init success
+2022-09-13 14:18:33.581196	INFO	ws/server.go:37	user wf access
+2022-09-13 14:18:38.582942	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140005cec60)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:18:43.582198	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140005cec60)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:18:48.582262	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140005cec60)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:18:53.582389	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140005cec60)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:18:58.582250	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140005cec60)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:19:03.582685	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140005cec60)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:41:54.441185	INFO	log/logger.go:58	logger init success
+2022-09-13 14:42:03.776917	INFO	ws/server.go:37	user ss access
+2022-09-13 14:42:03.777008	INFO	ws/server.go:37	user wf access
+2022-09-13 14:42:08.780584	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x1400001c6e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:42:08.781029	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x1400001c6e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:42:13.778671	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x1400001c6e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:42:13.778860	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x1400001c6e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:42:18.778839	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x1400001c6e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:42:18.779054	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x1400001c6e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:42:23.778055	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x1400001c6e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:42:23.778169	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x1400001c6e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:42:28.778362	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x1400001c6e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:42:28.778443	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x1400001c6e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:42:33.779004	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x1400001c6e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:42:33.779311	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x1400001c6e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:42:38.778430	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x1400001c6e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:42:38.778584	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x1400001c6e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:42:43.778559	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x1400001c6e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:42:43.778667	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x1400001c6e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:42:48.778227	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x1400001c6e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:42:48.778332	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x1400001c6e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:42:50.742858	ERROR	ws/handle.go:22	read tcp 127.0.0.1:8086->127.0.0.1:51306: read: connection reset by peer
+2022-09-13 14:42:50.742899	ERROR	ws/handle.go:22	read tcp 127.0.0.1:8086->127.0.0.1:51305: read: connection reset by peer
+2022-09-13 14:42:50.743048	INFO	ws/server.go:40	user ss access
+2022-09-13 14:42:50.743108	INFO	ws/server.go:40	user ss access
+2022-09-13 14:43:28.171469	INFO	log/logger.go:58	logger init success
+2022-09-13 14:43:33.526957	INFO	ws/server.go:37	user wf access
+2022-09-13 14:43:33.527034	INFO	ws/server.go:37	user ss access
+2022-09-13 14:43:38.533895	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:43:38.534025	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:43:43.528725	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:43:43.529020	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:43:48.528671	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:43:48.528970	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:43:53.527963	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:43:53.528105	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:43:58.528453	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:43:58.528558	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:44:03.528473	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:44:03.528588	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:44:08.528536	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:44:08.528609	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:44:13.528455	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:44:13.528574	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:44:18.528721	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:44:18.528952	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:44:23.528475	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:44:23.528536	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:44:28.535958	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:44:28.536143	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:44:33.528509	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:44:33.528864	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:44:38.529123	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:44:38.529549	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:44:43.528307	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:44:43.528530	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:44:48.528950	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:44:48.529120	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:44:53.529869	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:44:53.530185	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:44:58.528753	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:44:58.528869	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:45:03.528780	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:45:03.528889	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:45:08.529133	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:45:08.529308	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:45:13.528877	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:45:13.529232	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:45:18.528713	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:45:18.528832	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:45:23.528962	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:45:23.529102	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:45:28.529301	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:45:28.529501	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:45:33.528875	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:45:33.528948	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:45:38.529045	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:45:38.529124	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:45:43.528233	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:45:43.528344	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:45:48.529210	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:45:48.529372	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:45:53.528045	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:45:53.528111	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:45:58.528988	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:45:58.529060	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:46:03.529086	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:46:03.529268	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:46:08.529326	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:46:08.529504	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:46:13.529231	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:46:13.529402	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:46:18.528471	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:46:18.528549	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:46:23.529616	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:46:23.529888	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:46:28.529156	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:46:28.529240	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:46:33.529765	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:46:33.530114	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:46:38.529222	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:46:38.529298	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:46:43.529060	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:46:43.529181	INFO	ws/server.go:56	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140000f86e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:48:32.780916	INFO	log/logger.go:58	logger init success
+2022-09-13 14:48:37.782853	DEBUG	ws/server.go:107	current sessions:map[string][]*ws.session{}
+2022-09-13 14:48:42.782846	DEBUG	ws/server.go:107	current sessions:map[string][]*ws.session{}
+2022-09-13 14:48:45.901820	INFO	ws/server.go:38	user wf access
+2022-09-13 14:48:45.901898	INFO	ws/server.go:38	user ss access
+2022-09-13 14:48:47.783209	DEBUG	ws/server.go:107	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x140001b0460)}, "wf":[]*ws.session{(*ws.session)(0x14000336bc0)}}
+2022-09-13 14:48:50.904455	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:48:50.904615	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:48:52.783080	DEBUG	ws/server.go:107	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x140001b0460)}, "wf":[]*ws.session{(*ws.session)(0x14000336bc0)}}
+2022-09-13 14:48:55.903142	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:48:55.903204	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:48:57.782956	DEBUG	ws/server.go:107	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x140001b0460)}, "wf":[]*ws.session{(*ws.session)(0x14000336bc0)}}
+2022-09-13 14:49:00.903319	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:49:00.903436	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:49:02.783033	DEBUG	ws/server.go:107	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x140001b0460)}, "wf":[]*ws.session{(*ws.session)(0x14000336bc0)}}
+2022-09-13 14:49:05.904246	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:49:05.904476	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:49:07.784731	DEBUG	ws/server.go:107	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x140001b0460)}, "wf":[]*ws.session{(*ws.session)(0x14000336bc0)}}
+2022-09-13 14:49:10.902868	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:49:10.902961	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:49:12.782995	DEBUG	ws/server.go:107	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x140001b0460)}, "wf":[]*ws.session{(*ws.session)(0x14000336bc0)}}
+2022-09-13 14:49:14.578204	ERROR	ws/handle.go:22	read tcp 127.0.0.1:8086->127.0.0.1:51360: read: connection reset by peer
+2022-09-13 14:49:14.578208	ERROR	ws/handle.go:22	read tcp 127.0.0.1:8086->127.0.0.1:51361: read: connection reset by peer
+2022-09-13 14:49:14.578319	INFO	ws/server.go:41	user ss disconnect
+2022-09-13 14:49:14.578365	INFO	ws/server.go:41	user ss disconnect
+2022-09-13 14:49:14.578390	INFO	ws/server.go:41	user wf disconnect
+2022-09-13 14:49:14.578416	INFO	ws/server.go:41	user wf disconnect
+2022-09-13 14:49:15.593884	INFO	ws/server.go:38	user wf access
+2022-09-13 14:49:15.593997	INFO	ws/server.go:38	user ss access
+2022-09-13 14:49:17.783108	DEBUG	ws/server.go:107	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x14000336c40)}, "wf":[]*ws.session{(*ws.session)(0x140002ac0a0)}}
+2022-09-13 14:49:20.596256	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:49:20.596598	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:49:22.783202	DEBUG	ws/server.go:107	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x14000336c40)}, "wf":[]*ws.session{(*ws.session)(0x140002ac0a0)}}
+2022-09-13 14:49:25.594678	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:49:25.594786	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:49:27.783033	DEBUG	ws/server.go:107	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x14000336c40)}, "wf":[]*ws.session{(*ws.session)(0x140002ac0a0)}}
+2022-09-13 14:49:30.595810	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:49:30.596035	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:49:32.783117	DEBUG	ws/server.go:107	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x14000336c40)}, "wf":[]*ws.session{(*ws.session)(0x140002ac0a0)}}
+2022-09-13 14:49:35.595741	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:49:35.596082	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:49:37.782252	DEBUG	ws/server.go:107	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x14000336c40)}, "wf":[]*ws.session{(*ws.session)(0x140002ac0a0)}}
+2022-09-13 14:49:40.595452	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:49:40.595535	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:49:42.783202	DEBUG	ws/server.go:107	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x14000336c40)}, "wf":[]*ws.session{(*ws.session)(0x140002ac0a0)}}
+2022-09-13 14:49:45.595627	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:49:45.595727	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:49:47.783049	DEBUG	ws/server.go:107	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x14000336c40)}, "wf":[]*ws.session{(*ws.session)(0x140002ac0a0)}}
+2022-09-13 14:49:50.595561	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:49:50.595812	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:49:52.783187	DEBUG	ws/server.go:107	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x14000336c40)}, "wf":[]*ws.session{(*ws.session)(0x140002ac0a0)}}
+2022-09-13 14:49:55.595896	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:49:55.596166	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:49:57.782839	DEBUG	ws/server.go:107	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x14000336c40)}, "wf":[]*ws.session{(*ws.session)(0x140002ac0a0)}}
+2022-09-13 14:50:00.595367	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:50:00.595620	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:50:02.783128	DEBUG	ws/server.go:107	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x14000336c40)}, "wf":[]*ws.session{(*ws.session)(0x140002ac0a0)}}
+2022-09-13 14:50:05.596110	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:50:05.596306	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:50:07.783277	DEBUG	ws/server.go:107	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x14000336c40)}, "wf":[]*ws.session{(*ws.session)(0x140002ac0a0)}}
+2022-09-13 14:50:10.595887	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"wf", To:"ss", Type:0x1, Content:"hello"}
+2022-09-13 14:50:10.596085	INFO	ws/server.go:57	recv message :&pb.Message{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(0x140003586e0)}, sizeCache:0, unknownFields:[]uint8(nil), From:"ss", To:"wf", Type:0x1, Content:"hello"}
+2022-09-13 14:50:15.474999	INFO	log/logger.go:58	logger init success
+2022-09-13 14:50:20.476759	DEBUG	ws/server.go:106	current sessions:map[string][]*ws.session{}
+2022-09-13 14:50:22.061226	INFO	ws/server.go:38	user ss access
+2022-09-13 14:50:22.061294	INFO	ws/server.go:38	user wf access
+2022-09-13 14:50:25.476899	DEBUG	ws/server.go:106	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x1400007c0a0)}, "wf":[]*ws.session{(*ws.session)(0x140001b0000)}}
+2022-09-13 14:50:30.477054	DEBUG	ws/server.go:106	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x1400007c0a0)}, "wf":[]*ws.session{(*ws.session)(0x140001b0000)}}
+2022-09-13 14:50:45.108510	INFO	log/logger.go:58	logger init success
+2022-09-13 14:50:50.110046	DEBUG	ws/server.go:106	current sessions:map[string][]*ws.session{}
+2022-09-13 14:50:55.109907	DEBUG	ws/server.go:106	current sessions:map[string][]*ws.session{}
+2022-09-13 14:50:56.671631	INFO	ws/server.go:38	user wf access
+2022-09-13 14:50:56.671718	INFO	ws/server.go:38	user ss access
+2022-09-13 14:51:00.110255	DEBUG	ws/server.go:106	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x140001be160)}, "wf":[]*ws.session{(*ws.session)(0x14000252400)}}
+2022-09-13 14:51:05.109955	DEBUG	ws/server.go:106	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x140001be160)}, "wf":[]*ws.session{(*ws.session)(0x14000252400)}}
+2022-09-13 14:51:10.109960	DEBUG	ws/server.go:106	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x140001be160)}, "wf":[]*ws.session{(*ws.session)(0x14000252400)}}
+2022-09-13 14:51:15.110099	DEBUG	ws/server.go:106	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x140001be160)}, "wf":[]*ws.session{(*ws.session)(0x14000252400)}}
+2022-09-13 14:51:20.110066	DEBUG	ws/server.go:106	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x140001be160)}, "wf":[]*ws.session{(*ws.session)(0x14000252400)}}
+2022-09-13 14:51:25.109051	DEBUG	ws/server.go:106	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x140001be160)}, "wf":[]*ws.session{(*ws.session)(0x14000252400)}}
+2022-09-13 14:51:30.110312	DEBUG	ws/server.go:106	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x140001be160)}, "wf":[]*ws.session{(*ws.session)(0x14000252400)}}
+2022-09-13 14:51:35.109905	DEBUG	ws/server.go:106	current sessions:map[string][]*ws.session{"ss":[]*ws.session{(*ws.session)(0x140001be160)}, "wf":[]*ws.session{(*ws.session)(0x14000252400)}}
+2022-09-13 14:52:14.287450	INFO	log/logger.go:58	logger init success
+2022-09-13 14:52:19.289846	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 14:52:22.137162	INFO	ws/server.go:38	user ss access
+2022-09-13 14:52:22.137227	INFO	ws/server.go:38	user wf access
+2022-09-13 14:52:24.295064	DEBUG	ws/server.go:106	current sessions:map[ss:[0x1400007c120] wf:[0x1400061e940]]
+2022-09-13 14:52:29.289521	DEBUG	ws/server.go:106	current sessions:map[ss:[0x1400007c120] wf:[0x1400061e940]]
+2022-09-13 14:52:34.289453	DEBUG	ws/server.go:106	current sessions:map[ss:[0x1400007c120] wf:[0x1400061e940]]
+2022-09-13 14:52:39.289904	DEBUG	ws/server.go:106	current sessions:map[ss:[0x1400007c120] wf:[0x1400061e940]]
+2022-09-13 14:52:44.289879	DEBUG	ws/server.go:106	current sessions:map[ss:[0x1400007c120] wf:[0x1400061e940]]
+2022-09-13 14:52:49.289247	DEBUG	ws/server.go:106	current sessions:map[ss:[0x1400007c120] wf:[0x1400061e940]]
+2022-09-13 14:52:54.289464	DEBUG	ws/server.go:106	current sessions:map[ss:[0x1400007c120] wf:[0x1400061e940]]
+2022-09-13 14:52:59.289489	DEBUG	ws/server.go:106	current sessions:map[ss:[0x1400007c120] wf:[0x1400061e940]]
+2022-09-13 14:53:01.233670	ERROR	ws/handle.go:22	websocket: close 1006 (abnormal closure): unexpected EOF
+2022-09-13 14:53:01.233709	ERROR	ws/handle.go:22	websocket: close 1006 (abnormal closure): unexpected EOF
+2022-09-13 14:53:01.233831	INFO	ws/server.go:41	user ss disconnect
+2022-09-13 14:53:01.233886	INFO	ws/server.go:41	user ss disconnect
+2022-09-13 14:53:01.233911	INFO	ws/server.go:41	user wf disconnect
+2022-09-13 14:53:01.233972	INFO	ws/server.go:41	user wf disconnect
+2022-09-13 14:53:02.229047	INFO	ws/server.go:38	user wf access
+2022-09-13 14:53:02.229109	INFO	ws/server.go:38	user wf access
+2022-09-13 14:53:02.229120	INFO	ws/server.go:38	user ss access
+2022-09-13 14:53:02.229129	INFO	ws/server.go:38	user ss access
+2022-09-13 14:53:04.289778	DEBUG	ws/server.go:106	current sessions:map[ss:[0x1400007c0a0 0x140001b0120] wf:[0x1400046c040 0x1400061e040]]
+2022-09-13 14:53:09.289556	DEBUG	ws/server.go:106	current sessions:map[ss:[0x1400007c0a0 0x140001b0120] wf:[0x1400046c040 0x1400061e040]]
+2022-09-13 14:53:14.289598	DEBUG	ws/server.go:106	current sessions:map[ss:[0x1400007c0a0 0x140001b0120] wf:[0x1400046c040 0x1400061e040]]
+2022-09-13 14:53:18.425722	ERROR	ws/handle.go:22	websocket: close 1006 (abnormal closure): unexpected EOF
+2022-09-13 14:53:18.425705	ERROR	ws/handle.go:22	websocket: close 1006 (abnormal closure): unexpected EOF
+2022-09-13 14:53:18.425715	ERROR	ws/handle.go:22	websocket: close 1006 (abnormal closure): unexpected EOF
+2022-09-13 14:53:18.425893	INFO	ws/server.go:41	user wf disconnect
+2022-09-13 14:53:18.425969	INFO	ws/server.go:41	user wf disconnect
+2022-09-13 14:53:18.425990	INFO	ws/server.go:41	user ss disconnect
+2022-09-13 14:53:18.425687	ERROR	ws/handle.go:22	websocket: close 1006 (abnormal closure): unexpected EOF
+2022-09-13 14:53:18.426007	INFO	ws/server.go:41	user ss disconnect
+2022-09-13 14:53:18.426034	INFO	ws/server.go:41	user wf disconnect
+2022-09-13 14:53:18.426064	INFO	ws/server.go:41	user ss disconnect
+2022-09-13 14:53:18.426085	INFO	ws/server.go:41	user ss disconnect
+2022-09-13 14:53:18.426102	INFO	ws/server.go:41	user wf disconnect
+2022-09-13 14:53:19.288988	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:53:24.289654	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:53:29.289772	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:53:34.289720	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:53:39.289714	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:53:44.289860	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:53:49.289891	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:53:54.289304	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:53:59.289917	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:54:04.289030	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:54:09.290023	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:54:14.288958	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:54:25.182276	INFO	log/logger.go:58	logger init success
+2022-09-13 14:54:30.184338	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 14:54:31.738005	INFO	ws/server.go:38	user ss access
+2022-09-13 14:54:31.738065	INFO	ws/server.go:38	user wf access
+2022-09-13 14:54:31.738074	INFO	ws/server.go:38	user ss access
+2022-09-13 14:54:31.738082	INFO	ws/server.go:38	user wf access
+2022-09-13 14:54:35.184704	DEBUG	ws/server.go:106	current sessions:map[ss:[0x1400007d860 0x140001c6040] wf:[0x140002e03e0 0x1400025a000]]
+2022-09-13 14:54:40.087033	ERROR	ws/handle.go:18	websocket: close 1006 (abnormal closure): unexpected EOF
+2022-09-13 14:54:40.087000	ERROR	ws/handle.go:18	websocket: close 1006 (abnormal closure): unexpected EOF
+2022-09-13 14:54:40.087029	ERROR	ws/handle.go:18	websocket: close 1006 (abnormal closure): unexpected EOF
+2022-09-13 14:54:40.087026	ERROR	ws/handle.go:18	websocket: close 1006 (abnormal closure): unexpected EOF
+2022-09-13 14:54:40.087303	INFO	ws/server.go:41	user ss disconnect
+2022-09-13 14:54:40.087424	INFO	ws/server.go:41	user wf disconnect
+2022-09-13 14:54:40.087461	INFO	ws/server.go:41	user wf disconnect
+2022-09-13 14:54:40.087482	INFO	ws/server.go:41	user ss disconnect
+2022-09-13 14:54:40.184354	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:54:45.184415	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:54:50.185237	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:54:55.184181	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:55:00.184266	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:55:05.184471	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:55:10.184666	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:55:15.183887	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:55:20.187379	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:55:25.184792	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:55:30.184627	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:55:35.184758	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:55:40.184773	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:55:45.184697	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:55:50.184730	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:55:55.184727	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:56:00.183831	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:56:05.184551	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:56:10.184821	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:56:15.184853	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:56:20.185104	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:56:25.184084	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:56:30.184969	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:56:35.184489	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:56:40.185062	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:56:45.185050	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:56:50.184775	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:56:55.185164	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:57:00.184302	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:57:05.185194	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:57:10.185521	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:57:15.184609	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:57:20.185060	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:57:25.184763	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:57:30.184274	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:57:35.185264	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:57:40.185314	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:57:45.185315	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:57:50.185343	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:57:55.185431	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:58:00.185385	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:58:05.185442	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:58:10.185384	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:58:15.185615	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:58:20.185561	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:58:25.185511	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:58:30.185828	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:58:35.185659	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:58:40.185805	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:58:45.185462	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:58:50.186283	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:58:55.185733	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:59:00.186177	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:59:05.185880	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:59:10.185856	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:59:15.185823	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:59:20.185854	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:59:25.185722	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:59:30.185028	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:59:35.185931	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:59:40.186058	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:59:45.185348	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:59:50.185997	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 14:59:55.186867	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:00:00.186248	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:00:05.186117	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:00:10.186138	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:00:15.186118	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:00:20.185947	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:00:25.186160	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:00:30.185285	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:00:35.186246	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:00:40.186238	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:00:45.186416	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:00:50.186401	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:00:55.185759	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:01:00.186352	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:01:05.186488	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:01:10.186455	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:01:15.186453	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:01:20.186462	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:01:25.186285	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:01:30.185801	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:01:35.186544	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:01:40.186692	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:01:45.186611	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:01:50.186589	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:01:55.186631	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:02:00.186649	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:02:05.186668	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:02:10.186818	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:02:15.186792	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:02:20.185871	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:02:25.186889	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 15:02:30.186974	DEBUG	ws/server.go:106	current sessions:map[ss:[] wf:[]]
+2022-09-13 16:20:01.968294	INFO	log/logger.go:58	logger init success
+2022-09-13 16:20:06.970259	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:20:11.969779	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:20:16.970138	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:20:21.969825	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:20:26.969238	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:20:31.970205	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:20:36.969756	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:20:41.969864	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:20:46.969659	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:20:51.970190	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:20:56.970254	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:21:01.970200	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:21:06.970233	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:21:11.970145	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:21:16.969844	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:21:21.970406	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:21:26.970120	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:21:31.969738	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:21:36.970319	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:21:41.970073	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:21:46.970014	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:21:51.970299	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:21:56.970009	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:22:01.970043	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:22:06.970067	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:22:11.970042	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:22:16.970000	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:22:21.970121	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:22:26.971296	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:22:31.970061	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:22:36.970083	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:22:41.970214	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:22:46.969980	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:22:51.970064	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:22:56.970084	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:23:01.970238	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:23:06.970060	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:23:11.969497	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:23:16.969973	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:23:21.970486	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:23:26.969324	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:23:31.970101	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:23:36.969497	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:23:41.970006	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:23:46.969344	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:23:51.969985	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:23:56.969663	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:24:01.970089	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:24:06.969254	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:24:11.970113	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:24:16.969623	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:24:21.970233	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:24:26.969168	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:24:31.972425	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:24:36.969972	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:24:41.969994	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:24:46.969597	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:24:51.970716	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:24:56.969285	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:25:01.970094	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:25:06.969918	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:25:11.969960	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:25:16.969916	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:25:21.969841	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:25:26.969826	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:25:31.969825	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:25:36.969914	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:25:41.969917	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:25:49.007546	INFO	log/logger.go:58	logger init success
+2022-09-13 16:25:54.009264	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:25:59.009634	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:26:04.008940	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:26:09.009443	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:26:14.009651	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:26:19.009147	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:26:24.009328	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:26:29.009916	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:26:34.009448	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:26:39.014496	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:26:44.009613	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:26:49.010183	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:26:54.012009	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:26:59.008990	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:27:04.013375	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:27:09.009629	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:27:14.008838	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:27:19.009208	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:27:24.010151	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:27:29.010080	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:27:34.012294	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:27:39.014325	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:27:44.009264	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:27:49.009539	DEBUG	ws/server.go:106	current sessions:map[]
+2022-09-13 16:28:03.199162	INFO	log/logger.go:58	logger init success
+2022-09-13 16:31:14.537651	INFO	log/logger.go:58	logger init success
+2022-09-13 16:31:19.841221	INFO	log/logger.go:58	logger init success
+2022-09-13 16:49:21.256848	INFO	log/logger.go:58	logger init success
+2022-09-13 16:49:23.028482	DEBUG	service/user.go:21	userCount :3
+2022-09-13 16:49:50.430083	INFO	log/logger.go:58	logger init success
