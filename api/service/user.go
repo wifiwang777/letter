@@ -26,9 +26,6 @@ func (t *userService) Register(user *models.User) error {
 }
 
 func (t *userService) Login(user *models.User) (string, error) {
-	var queryUser *models.User
-	db.GetDB().Where("name", user.Name).Where("password").First(&queryUser)
-
 	users, err := UserModel.GetByOptions(
 		UserModel.WithName(user.Name),
 		UserModel.WithPassword(PasswordEncrypt(user.Password)),
