@@ -9,26 +9,27 @@ import (
 
 var (
 	UserService = new(userService)
-	UserModel   = models.UserMgr(db.GetDB())
 )
 
 type userService struct{}
 
 func (t *userService) Register(user *models.User) error {
+	userMgr := models.UserMgr(db.GetDB())
 	var userCount int64
-	UserModel.Where("name", user.Name).Count(&userCount)
+	userMgr.Where(models.UserColumns.Name, user.Name).Count(&userCount)
 	if userCount > 0 {
 		return errors.New("user already exists")
 	}
 
 	user.Password = PasswordEncrypt(user.Password)
-	return UserModel.Create(&user).Error
+	return models.UserFriendMgr(db.GetDB()).Create(&user).Error
 }
 
 func (t *userService) Login(user *models.User) (string, error) {
-	users, err := UserModel.GetByOptions(
-		UserModel.WithName(user.Name),
-		UserModel.WithPassword(PasswordEncrypt(user.Password)),
+	userMgr := models.UserMgr(db.GetDB())
+	users, err := userMgr.GetByOptions(
+		userMgr.WithName(user.Name),
+		userMgr.WithPassword(PasswordEncrypt(user.Password)),
 	)
 	if err != nil {
 		return "", err
@@ -45,4 +46,51 @@ func (t *userService) Login(user *models.User) (string, error) {
 		return "", err
 	}
 	return token, nil
+}
+
+func (t *userService) GetFriends(uid uint) (friendList []*models.User) {
+	userFriendMgr := models.UserFriendMgr(db.GetDB())
+	userFriendMgr.Select("user.*").Joins("left join user on user_friend.friend_id = user.uid").Where("user_friend.user_id", uid).Scan(&friendList)
+	return
+}
+
+func (t *userService) GetUser(name string) (*models.User, error) {
+	userMgr := models.UserMgr(db.GetDB())
+	user, err := userMgr.GetByOption(
+		userMgr.WithName(name),
+	)
+	if err != nil {
+		return nil, err
+	}
+	return &user, nil
+}
+
+func (t *userService) AddFriend(userId, friendId uint) error {
+	userFriendMgr := models.UserFriendMgr(db.GetDB())
+	friendShip := models.UserFriend{
+		UserID:   userId,
+		FriendID: friendId,
+	}
+	return userFriendMgr.Create(&friendShip).Error
+}
+
+func (t *userService) DeleteFriend(userId, friendId uint) error {
+	userFriendMgr := models.UserFriendMgr(db.GetDB())
+	return userFriendMgr.Where(models.UserFriendColumns.UserID, userId).Where(models.UserFriendColumns.FriendID, friendId).Delete(&models.UserFriend{}).Error
+}
+
+func (t *userService) GetMessages(userId, friendId uint) (messages []*models.Messages) {
+	messageMgr := models.MessagesMgr(db.GetDB())
+	messageMgr.Where("from_user_id in ?", []uint{userId, friendId}).Where("to_user_id in ?", []uint{userId, friendId}).Scan(&messages)
+	return
+}
+
+func (t *userService) AddMessage(userId, friendId uint, content string) error {
+	messagesMgr := models.MessagesMgr(db.GetDB())
+	message := models.Messages{
+		FromUserID: userId,
+		ToUserID:   friendId,
+		Content:    content,
+	}
+	return messagesMgr.Create(&message).Error
 }

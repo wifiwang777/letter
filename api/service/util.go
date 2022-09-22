@@ -2,9 +2,10 @@ package service
 
 import (
 	"crypto/md5"
-	"errors"
 	"fmt"
-	"github.com/aisuosuo/letter/api/jwt"
+	"github.com/aisuosuo/letter/config/log"
+	"github.com/gin-gonic/gin"
+	jwt2 "github.com/golang-jwt/jwt/v4"
 	"strconv"
 )
 
@@ -37,21 +38,23 @@ func PasswordEncrypt(original string) string {
 	return fmt.Sprintf("%x", encryptPassword)
 }
 
-func GetUidFromToken(tokenStr string) (int, error) {
-	claims, err := jwt.Verify(tokenStr)
-	if err != nil {
-		return 0, err
+func GetUserId(c *gin.Context) uint {
+	if value, ok := c.Get("claims"); !ok {
+		return 0
+	} else {
+		claims := value.(jwt2.MapClaims)
+		var uid int
+		switch claims["uid"].(type) {
+		case float64:
+			uid = int(claims["uid"].(float64))
+		case int:
+			uid = claims["uid"].(int)
+		case string:
+			uid, _ = strconv.Atoi(claims["uid"].(string))
+		default:
+			log.Logger.Error("invalid uid format")
+			return 0
+		}
+		return uint(uid)
 	}
-	var uid int
-	switch claims["uid"].(type) {
-	case float64:
-		uid = int(claims["uid"].(float64))
-	case int:
-		uid = claims["uid"].(int)
-	case string:
-		uid, _ = strconv.Atoi(claims["uid"].(string))
-	default:
-		return 0, errors.New("invalid token")
-	}
-	return uid, nil
 }

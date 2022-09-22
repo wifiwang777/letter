@@ -12,5 +12,5 @@ gormt \
   --user="root" \
   --password="123456" \
   --database="letter" \
-  --table_names="user" \
-  --outdir="./db/models/"
+  --table_names="user,user_friend,messages" \
+  --outdir="./api/models/"
