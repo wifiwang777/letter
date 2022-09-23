@@ -12,9 +12,9 @@ import (
 func TestClient(t *testing.T) {
 	quit := make(chan bool)
 	go ClientTest("wf", "ss")
-	go ClientTest("wf", "ss")
-	go ClientTest("ss", "wf")
-	go ClientTest("ss", "wf")
+	//go ClientTest("wf", "ss")
+	//go ClientTest("ss", "wf")
+	//go ClientTest("ss", "wf")
 	<-quit
 }
 

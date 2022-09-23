@@ -55,7 +55,21 @@ func SearchUser(c *gin.Context) {
 		c.JSON(http.StatusOK, service.FailMsg("invalid username"))
 		return
 	}
-	user, err := service.UserService.GetUser(name)
+	user, err := service.UserService.SearchUser(name)
+	if err != nil {
+		c.JSON(http.StatusOK, service.FailMsg(err.Error()))
+		return
+	}
+	c.JSON(http.StatusOK, service.SuccessMsg(user))
+}
+
+func UserInfo(c *gin.Context) {
+	uid := service.GetUserId(c)
+	if uid == 0 {
+		c.JSON(http.StatusOK, service.FailMsg("invalid token"))
+		return
+	}
+	user, err := service.UserService.UserInfo(uid)
 	if err != nil {
 		c.JSON(http.StatusOK, service.FailMsg(err.Error()))
 		return
@@ -124,5 +138,18 @@ func GetMessages(c *gin.Context) {
 		c.JSON(http.StatusOK, service.FailMsg(err.Error()))
 		return
 	}
-	c.JSON(http.StatusOK, service.SuccessMsg(messages))
+	c.JSON(http.StatusOK, service.SuccessMsg(ConvertMessageTime(messages)))
+}
+
+func ConvertMessageTime(from []*models.Messages) (out []*models.OutMessages) {
+	for _, message := range from {
+		out = append(out, &models.OutMessages{
+			ID:         message.ID,
+			FromUserID: message.FromUserID,
+			ToUserID:   message.ToUserID,
+			Content:    message.Content,
+			CreateAt:   message.CreateAt.Format("2006/01/02 15:04:05"),
+		})
+	}
+	return
 }

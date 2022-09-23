@@ -2,9 +2,11 @@ package service
 
 import (
 	"errors"
+	"fmt"
 	"github.com/aisuosuo/letter/api/jwt"
 	"github.com/aisuosuo/letter/api/models"
 	"github.com/aisuosuo/letter/config/db"
+	"time"
 )
 
 var (
@@ -54,15 +56,22 @@ func (t *userService) GetFriends(uid uint) (friendList []*models.User) {
 	return
 }
 
-func (t *userService) GetUser(name string) (*models.User, error) {
+func (t *userService) UserInfo(uid uint) (*models.User, error) {
 	userMgr := models.UserMgr(db.GetDB())
 	user, err := userMgr.GetByOption(
-		userMgr.WithName(name),
+		userMgr.WithUID(uid),
 	)
 	if err != nil {
 		return nil, err
 	}
 	return &user, nil
+}
+
+func (t *userService) SearchUser(name string) ([]*models.User, error) {
+	userMgr := models.UserMgr(db.GetDB())
+	var users []*models.User
+	userMgr.Where("name LIKE ?", fmt.Sprintf("%%%s%%", name)).Find(&users)
+	return users, nil
 }
 
 func (t *userService) AddFriend(userId, friendId uint) error {
@@ -91,6 +100,7 @@ func (t *userService) AddMessage(userId, friendId uint, content string) error {
 		FromUserID: userId,
 		ToUserID:   friendId,
 		Content:    content,
+		CreateAt:   time.Now(),
 	}
 	return messagesMgr.Create(&message).Error
 }

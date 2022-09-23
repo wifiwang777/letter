@@ -28,6 +28,7 @@ func init() {
 
 	userGroup := privateGroup.Group("user")
 	userGroup.GET("getFriends", controller.GetFriends)
+	userGroup.GET("info", controller.UserInfo)
 	userGroup.GET("searchUser", controller.SearchUser)
 	userGroup.POST("addFriend", controller.AddFriend)
 	userGroup.POST("deleteFriend", controller.DeleteFriend)

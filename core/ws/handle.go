@@ -6,7 +6,7 @@ import (
 )
 
 type session struct {
-	name    string
+	uid     uint32
 	conn    *websocket.Conn
 	writeCh chan []byte
 }

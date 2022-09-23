@@ -4,6 +4,14 @@ import (
 	"time"
 )
 
+type OutMessages struct {
+	ID         uint   `json:"ID"`
+	FromUserID uint   `json:"fromUserId"`
+	ToUserID   uint   `json:"toUserId"`
+	Content    string `json:"content"`
+	CreateAt   string `json:"createAt"`
+}
+
 // Messages [...]
 type Messages struct {
 	ID         uint      `gorm:"primaryKey;column:id" json:"-"`
