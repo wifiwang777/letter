@@ -24,7 +24,7 @@ func (t *userService) Register(user *models.User) error {
 	}
 
 	user.Password = PasswordEncrypt(user.Password)
-	return models.UserFriendMgr(db.GetDB()).Create(&user).Error
+	return userMgr.Create(&user).Error
 }
 
 func (t *userService) Login(user *models.User) (string, error) {

@@ -1,7 +1,9 @@
 package db
 
 import (
+	"github.com/aisuosuo/letter/api/models"
 	"github.com/aisuosuo/letter/config"
+	"github.com/aisuosuo/letter/config/log"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
@@ -18,6 +20,10 @@ func init() {
 		panic("连接数据库失败, error=" + err.Error())
 	}
 
+	err = db.AutoMigrate(&models.User{}, &models.Messages{}, &models.UserFriend{})
+	if err != nil {
+		log.Logger.Error(err)
+	}
 	sqlDB, _ := db.DB()
 
 	//设置数据库连接池参数
