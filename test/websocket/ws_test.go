@@ -11,15 +11,15 @@ import (
 
 func TestClient(t *testing.T) {
 	quit := make(chan bool)
-	go ClientTest("wf", "ss")
+	go ClientTest(1, 2)
 	//go ClientTest("wf", "ss")
 	//go ClientTest("ss", "wf")
 	//go ClientTest("ss", "wf")
 	<-quit
 }
 
-func ClientTest(user, to string) {
-	u := fmt.Sprintf("ws://localhost:8086/letter/ws?user=%s", user)
+func ClientTest(user, to uint32) {
+	u := fmt.Sprintf("ws://localhost:8086/letter/ws?uid=%d", user)
 	c, _, err := websocket.DefaultDialer.Dial(u, nil)
 	if err != nil {
 		fmt.Println("dial:", err)
@@ -40,7 +40,7 @@ func ClientTest(user, to string) {
 			}
 			message := new(pb.Message)
 			proto.UnmarshalMerge(data, message)
-			fmt.Println(fmt.Sprintf("%s recv message:%v", user, message))
+			fmt.Println(fmt.Sprintf("%d recv message:%v", user, message))
 		}
 	}()
 
