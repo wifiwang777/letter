@@ -49,7 +49,14 @@ func (t *server) Start() {
 					newSessions = append(newSessions, s)
 				}
 			}
+			//已经被移除了
+			if len(sessions) == len(newSessions) {
+				continue
+			}
 			t.sessions[s.uid] = newSessions
+			close(s.writeCh)
+			s.conn.Close()
+			s = nil //回收
 		case data := <-t.message:
 			message := new(pb.Message)
 			err := proto.Unmarshal(data, message)
@@ -68,8 +75,16 @@ func (t *server) Start() {
 			}
 			if sessions := t.sessions[message.To]; len(sessions) > 0 {
 				for _, s := range sessions {
-					//发送给客户端
-					s.writeCh <- data
+					go func(s *session) {
+						defer func() {
+							if err := recover(); err != nil {
+								log.Logger.Error(err)
+								t.disconnect <- s
+							}
+						}()
+						//发送给客户端
+						s.writeCh <- data
+					}(s)
 				}
 			}
 		case <-timer.C:

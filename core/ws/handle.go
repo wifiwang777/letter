@@ -11,29 +11,41 @@ type session struct {
 	writeCh chan []byte
 }
 
-func (t *session) read(quit chan<- bool) {
+func (t *session) read(quit chan bool) {
 	for {
-		_, message, err := t.conn.ReadMessage()
-		if err != nil {
-			log.Logger.Error(err)
-			WsServer.disconnect <- t
-			close(t.writeCh)
-			t.conn.Close()
-			quit <- true
+		select {
+		case <-quit:
+			log.Logger.Debug("writer recv quit")
 			return
+		default:
+			_, message, err := t.conn.ReadMessage()
+			if err != nil {
+				log.Logger.Error(err)
+				WsServer.disconnect <- t
+				quit <- true
+				return
+			}
+			WsServer.message <- message
 		}
-		WsServer.message <- message
+
 	}
 }
 
-func (t *session) write(quit chan<- bool) {
+func (t *session) write(quit chan bool) {
 	for {
-		message := <-t.writeCh
-		err := t.conn.WriteMessage(websocket.BinaryMessage, message)
-		if err != nil {
-			log.Logger.Error(err)
-			quit <- true
+		select {
+		case <-quit:
+			log.Logger.Debug("writer recv quit")
 			return
+		default:
+			message := <-t.writeCh
+			err := t.conn.WriteMessage(websocket.BinaryMessage, message)
+			if err != nil {
+				log.Logger.Error(err)
+				WsServer.disconnect <- t
+				quit <- true
+				return
+			}
 		}
 	}
 }
