@@ -16,9 +16,9 @@ func (t *session) read(quit chan<- bool) {
 		_, message, err := t.conn.ReadMessage()
 		if err != nil {
 			log.Logger.Error(err)
-			t.conn.Close()
-			close(t.writeCh)
 			WsServer.disconnect <- t
+			close(t.writeCh)
+			t.conn.Close()
 			quit <- true
 			return
 		}

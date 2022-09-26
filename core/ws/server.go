@@ -69,10 +69,7 @@ func (t *server) Start() {
 			if sessions := t.sessions[message.To]; len(sessions) > 0 {
 				for _, s := range sessions {
 					//发送给客户端
-					select {
-					case s.writeCh <- data:
-
-					}
+					s.writeCh <- data
 				}
 			}
 		case <-timer.C:
