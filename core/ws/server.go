@@ -46,14 +46,19 @@ func (t *server) Start() {
 			newSessions := make([]*session, 0)
 			for _, item := range sessions {
 				if item != s {
-					newSessions = append(newSessions, s)
+					newSessions = append(newSessions, item)
 				}
 			}
 			//已经被移除了
 			if len(sessions) == len(newSessions) {
 				continue
 			}
-			t.sessions[s.uid] = newSessions
+
+			if len(newSessions) == 0 {
+				delete(t.sessions, s.uid)
+			} else {
+				t.sessions[s.uid] = newSessions
+			}
 			close(s.writeCh)
 			s.conn.Close()
 			s = nil //回收
