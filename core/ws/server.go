@@ -59,6 +59,7 @@ func (t *server) Start() {
 			} else {
 				t.sessions[s.uid] = newSessions
 			}
+			close(s.quit)
 			close(s.writeCh)
 			s.conn.Close()
 			s = nil //回收
@@ -121,13 +122,13 @@ func (t *server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		uid:     uint32(uid),
 		conn:    c,
 		writeCh: make(chan []byte),
+		quit:    make(chan struct{}),
 	}
 
 	t.access <- s
-	quit := make(chan bool)
-	go s.read(quit)
-	go s.write(quit)
-	<-quit
+	go s.read()
+	go s.write()
+	<-s.quit
 }
 
 func Run() {
