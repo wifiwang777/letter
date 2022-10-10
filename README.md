@@ -76,5 +76,7 @@ npm run "tauri build" / cargo tauri build [#可选参数：--debug]
 ## 截图
 
 本身从没做过前端，所以界面略丑～～
-
-![](assets/index.png)
+### app
+![](assets/index_app.png)
+### web
+![](assets/index_web.png)
