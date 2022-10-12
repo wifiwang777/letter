@@ -4,21 +4,13 @@ import (
 	"time"
 )
 
-type OutMessages struct {
-	ID         uint   `json:"ID"`
-	FromUserID uint   `json:"fromUserId"`
-	ToUserID   uint   `json:"toUserId"`
-	Content    string `json:"content"`
-	CreateAt   string `json:"createAt"`
-}
-
 // Messages [...]
 type Messages struct {
-	ID         uint      `gorm:"primaryKey;column:id" json:"-"`
-	FromUserID uint      `gorm:"column:from_user_id" json:"fromUserId"`
-	ToUserID   uint      `gorm:"column:to_user_id" json:"toUserId"`
-	Content    string    `gorm:"column:content" json:"content"`
-	CreateAt   time.Time `gorm:"column:create_at" json:"createAt"`
+	ID         uint      `gorm:"primaryKey;column:id;type:int unsigned;not null" json:"id"`
+	FromUserID uint      `gorm:"index:messages_from_user_id_index;column:from_user_id;type:int unsigned;not null;default:0" json:"fromUserId"`
+	ToUserID   uint      `gorm:"index:messages_to_user_id_index;column:to_user_id;type:int unsigned;not null;default:0" json:"toUserId"`
+	Content    string    `gorm:"column:content;type:text;default:null" json:"content"`
+	CreateAt   time.Time `gorm:"index:messages_create_at_index;column:create_at;type:timestamp;not null;default:CURRENT_TIMESTAMP" json:"createAt"`
 }
 
 // TableName get sql table name.获取数据库表名
@@ -43,9 +35,12 @@ var MessagesColumns = struct {
 
 // User [...]
 type User struct {
-	UID      uint   `gorm:"primaryKey;column:uid" json:"uid"`
-	Name     string `gorm:"column:name" json:"name"`
-	Password string `gorm:"column:password" json:"password"`
+	UID      uint      `gorm:"primaryKey;column:uid;type:int unsigned;not null" json:"uid"`
+	Name     string    `gorm:"unique;column:name;type:varchar(20);not null;default:''" json:"name"`
+	Password string    `gorm:"column:password;type:varchar(32);not null;default:''" json:"password"`
+	Avatar   string    `gorm:"column:avatar;type:varchar(256);not null;default:''" json:"avatar"`
+	CreateAt time.Time `gorm:"column:create_at;type:timestamp;not null;default:CURRENT_TIMESTAMP" json:"createAt"`
+	UpdateAt time.Time `gorm:"column:update_at;type:timestamp;default:null;default:CURRENT_TIMESTAMP" json:"updateAt"`
 }
 
 // TableName get sql table name.获取数据库表名
@@ -58,17 +53,23 @@ var UserColumns = struct {
 	UID      string
 	Name     string
 	Password string
+	Avatar   string
+	CreateAt string
+	UpdateAt string
 }{
 	UID:      "uid",
 	Name:     "name",
 	Password: "password",
+	Avatar:   "avatar",
+	CreateAt: "create_at",
+	UpdateAt: "update_at",
 }
 
 // UserFriend [...]
 type UserFriend struct {
-	ID       uint `gorm:"primaryKey;column:id" json:"-"`
-	UserID   uint `gorm:"column:user_id" json:"userId"`
-	FriendID uint `gorm:"column:friend_id" json:"friendId"`
+	ID       uint `gorm:"primaryKey;column:id;type:int unsigned;not null" json:"id"`
+	UserID   uint `gorm:"index:index_user_id;column:user_id;type:int unsigned;not null;default:0" json:"userId"`
+	FriendID uint `gorm:"column:friend_id;type:int unsigned;default:null;default:0" json:"friendId"`
 }
 
 // TableName get sql table name.获取数据库表名

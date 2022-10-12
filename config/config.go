@@ -24,6 +24,10 @@ func init() {
 		panic(fmt.Errorf("Fatal error config file: %s \n", err))
 	}
 
+	if err = viper.Unmarshal(&GlobalConfig); err != nil {
+		fmt.Println(err)
+	}
+
 	viper.WatchConfig()
 	viper.OnConfigChange(func(e fsnotify.Event) {
 		fmt.Println("config file changed:", e.Name)
@@ -31,9 +35,7 @@ func init() {
 			fmt.Println(err)
 		}
 	})
-	if err = viper.Unmarshal(&GlobalConfig); err != nil {
-		fmt.Println(err)
-	}
+
 	err = RefreshJwt(GlobalConfig.Jwt)
 	if err != nil {
 		panic(err)

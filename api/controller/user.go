@@ -138,18 +138,5 @@ func GetMessages(c *gin.Context) {
 		c.JSON(http.StatusOK, service.FailMsg(err.Error()))
 		return
 	}
-	c.JSON(http.StatusOK, service.SuccessMsg(ConvertMessageTime(messages)))
-}
-
-func ConvertMessageTime(from []*models.Messages) (out []*models.OutMessages) {
-	for _, message := range from {
-		out = append(out, &models.OutMessages{
-			ID:         message.ID,
-			FromUserID: message.FromUserID,
-			ToUserID:   message.ToUserID,
-			Content:    message.Content,
-			CreateAt:   message.CreateAt.Format("2006/01/02 15:04:05"),
-		})
-	}
-	return
+	c.JSON(http.StatusOK, service.SuccessMsg(service.ConvertMessageTime(messages)))
 }

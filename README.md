@@ -36,8 +36,8 @@ go + tauri + vue.js 做的一款通信软件,基于websocket实现即时聊天
 
 ## 运行方式
 
-1. [修改对应配置](config/config.toml)
-2. 新建数据库，名字跟配置里面的dbName一样
+1. [执行sql](shell/generate.sql)
+2. [修改对应配置](config/config.toml)
 3. 运行
 
 ```shell

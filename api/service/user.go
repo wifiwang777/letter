@@ -104,3 +104,12 @@ func (t *userService) AddMessage(userId, friendId uint, content string) error {
 	}
 	return messagesMgr.Create(&message).Error
 }
+
+func (t *userService) UpdateAvatar(uid uint, fileName string) error {
+	user, err := t.UserInfo(uid)
+	if err != nil {
+		return err
+	}
+
+	return models.UserMgr(db.GetDB()).Model(user).Update(models.UserColumns.Avatar, fileName).Error
+}

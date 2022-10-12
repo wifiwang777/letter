@@ -44,9 +44,14 @@ type JwtConfig struct {
 	PrivateKey string `toml:"privateKey"`
 }
 
+type FileConfig struct {
+	FilePath string `toml:"filePath"`
+}
+
 type Server struct {
 	Mysql *MysqlConfig `toml:"mysql"`
 	Log   *LogConfig   `toml:"log"`
 	Run   *Run         `toml:"run"`
 	Jwt   *JwtConfig   `toml:"jwt"`
+	File  *FileConfig  `toml:"file"`
 }

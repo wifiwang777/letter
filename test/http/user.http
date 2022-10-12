@@ -18,7 +18,7 @@ Content-Type: application/json
   "password": "123456"
 }
 
-### getFriends
+### info
 GET localhost:8085/user/info
 x-token: eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEwMDEwfQ.O4NQJ3U8FGPzRB3IbMu6qmBwfQsS3eTLghRDDmWskHPtaaiUz_QEYz597XConGtjQXz8fL1T3XiA1FpCcQo5jQ
 

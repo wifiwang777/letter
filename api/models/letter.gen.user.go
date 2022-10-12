@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"gorm.io/gorm"
+	"time"
 )
 
 type _UserMgr struct {
@@ -68,6 +69,21 @@ func (obj *_UserMgr) WithPassword(password string) Option {
 	return optionFunc(func(o *options) { o.query["password"] = password })
 }
 
+// WithAvatar avatar获取
+func (obj *_UserMgr) WithAvatar(avatar string) Option {
+	return optionFunc(func(o *options) { o.query["avatar"] = avatar })
+}
+
+// WithCreateAt create_at获取
+func (obj *_UserMgr) WithCreateAt(createAt time.Time) Option {
+	return optionFunc(func(o *options) { o.query["create_at"] = createAt })
+}
+
+// WithUpdateAt update_at获取
+func (obj *_UserMgr) WithUpdateAt(updateAt time.Time) Option {
+	return optionFunc(func(o *options) { o.query["update_at"] = updateAt })
+}
+
 // GetByOption 功能选项模式获取
 func (obj *_UserMgr) GetByOption(opts ...Option) (result User, err error) {
 	options := options{
@@ -113,8 +129,8 @@ func (obj *_UserMgr) GetBatchFromUID(uids []uint) (results []*User, err error) {
 }
 
 // GetFromName 通过name获取内容
-func (obj *_UserMgr) GetFromName(name string) (results []*User, err error) {
-	err = obj.DB.WithContext(obj.ctx).Model(User{}).Where("`name` = ?", name).Find(&results).Error
+func (obj *_UserMgr) GetFromName(name string) (result User, err error) {
+	err = obj.DB.WithContext(obj.ctx).Model(User{}).Where("`name` = ?", name).First(&result).Error
 
 	return
 }
@@ -140,11 +156,60 @@ func (obj *_UserMgr) GetBatchFromPassword(passwords []string) (results []*User, 
 	return
 }
 
+// GetFromAvatar 通过avatar获取内容
+func (obj *_UserMgr) GetFromAvatar(avatar string) (results []*User, err error) {
+	err = obj.DB.WithContext(obj.ctx).Model(User{}).Where("`avatar` = ?", avatar).Find(&results).Error
+
+	return
+}
+
+// GetBatchFromAvatar 批量查找
+func (obj *_UserMgr) GetBatchFromAvatar(avatars []string) (results []*User, err error) {
+	err = obj.DB.WithContext(obj.ctx).Model(User{}).Where("`avatar` IN (?)", avatars).Find(&results).Error
+
+	return
+}
+
+// GetFromCreateAt 通过create_at获取内容
+func (obj *_UserMgr) GetFromCreateAt(createAt time.Time) (results []*User, err error) {
+	err = obj.DB.WithContext(obj.ctx).Model(User{}).Where("`create_at` = ?", createAt).Find(&results).Error
+
+	return
+}
+
+// GetBatchFromCreateAt 批量查找
+func (obj *_UserMgr) GetBatchFromCreateAt(createAts []time.Time) (results []*User, err error) {
+	err = obj.DB.WithContext(obj.ctx).Model(User{}).Where("`create_at` IN (?)", createAts).Find(&results).Error
+
+	return
+}
+
+// GetFromUpdateAt 通过update_at获取内容
+func (obj *_UserMgr) GetFromUpdateAt(updateAt time.Time) (results []*User, err error) {
+	err = obj.DB.WithContext(obj.ctx).Model(User{}).Where("`update_at` = ?", updateAt).Find(&results).Error
+
+	return
+}
+
+// GetBatchFromUpdateAt 批量查找
+func (obj *_UserMgr) GetBatchFromUpdateAt(updateAts []time.Time) (results []*User, err error) {
+	err = obj.DB.WithContext(obj.ctx).Model(User{}).Where("`update_at` IN (?)", updateAts).Find(&results).Error
+
+	return
+}
+
 //////////////////////////primary index case ////////////////////////////////////////////
 
 // FetchByPrimaryKey primary or index 获取唯一内容
 func (obj *_UserMgr) FetchByPrimaryKey(uid uint) (result User, err error) {
 	err = obj.DB.WithContext(obj.ctx).Model(User{}).Where("`uid` = ?", uid).First(&result).Error
+
+	return
+}
+
+// FetchUniqueByUserNameUIndex primary or index 获取唯一内容
+func (obj *_UserMgr) FetchUniqueByUserNameUIndex(name string) (result User, err error) {
+	err = obj.DB.WithContext(obj.ctx).Model(User{}).Where("`name` = ?", name).First(&result).Error
 
 	return
 }

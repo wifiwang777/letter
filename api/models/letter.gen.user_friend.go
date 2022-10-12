@@ -149,9 +149,9 @@ func (obj *_UserFriendMgr) FetchByPrimaryKey(id uint) (result UserFriend, err er
 	return
 }
 
-// FetchUniqueIndexByIndexUserID primary or index 获取唯一内容
-func (obj *_UserFriendMgr) FetchUniqueIndexByIndexUserID(userID uint, friendID uint) (result UserFriend, err error) {
-	err = obj.DB.WithContext(obj.ctx).Model(UserFriend{}).Where("`user_id` = ? AND `friend_id` = ?", userID, friendID).First(&result).Error
+// FetchIndexByIndexUserID  获取多个内容
+func (obj *_UserFriendMgr) FetchIndexByIndexUserID(userID uint) (results []*UserFriend, err error) {
+	err = obj.DB.WithContext(obj.ctx).Model(UserFriend{}).Where("`user_id` = ?", userID).Find(&results).Error
 
 	return
 }

@@ -22,9 +22,11 @@ func init() {
 	//base api
 	HttpServer.POST("register", controller.Register)
 	HttpServer.POST("login", controller.Login)
+	HttpServer.GET("file/:fileName", controller.GetFile)
 
 	privateGroup := HttpServer.Group("")
 	privateGroup.Use(JWTAuth)
+	privateGroup.POST("file", controller.SaveFile)
 
 	userGroup := privateGroup.Group("user")
 	userGroup.GET("getFriends", controller.GetFriends)
@@ -35,6 +37,7 @@ func init() {
 
 	messageGroup := privateGroup.Group("messages")
 	messageGroup.GET("", controller.GetMessages)
+
 }
 
 func Cors() gin.HandlerFunc {

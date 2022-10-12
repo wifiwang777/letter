@@ -187,3 +187,24 @@ func (obj *_MessagesMgr) FetchByPrimaryKey(id uint) (result Messages, err error)
 
 	return
 }
+
+// FetchIndexByMessagesFromUserIDIndex  获取多个内容
+func (obj *_MessagesMgr) FetchIndexByMessagesFromUserIDIndex(fromUserID uint) (results []*Messages, err error) {
+	err = obj.DB.WithContext(obj.ctx).Model(Messages{}).Where("`from_user_id` = ?", fromUserID).Find(&results).Error
+
+	return
+}
+
+// FetchIndexByMessagesToUserIDIndex  获取多个内容
+func (obj *_MessagesMgr) FetchIndexByMessagesToUserIDIndex(toUserID uint) (results []*Messages, err error) {
+	err = obj.DB.WithContext(obj.ctx).Model(Messages{}).Where("`to_user_id` = ?", toUserID).Find(&results).Error
+
+	return
+}
+
+// FetchIndexByMessagesCreateAtIndex  获取多个内容
+func (obj *_MessagesMgr) FetchIndexByMessagesCreateAtIndex(createAt time.Time) (results []*Messages, err error) {
+	err = obj.DB.WithContext(obj.ctx).Model(Messages{}).Where("`create_at` = ?", createAt).Find(&results).Error
+
+	return
+}
