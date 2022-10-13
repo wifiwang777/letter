@@ -23,13 +23,19 @@ func SaveFile(c *gin.Context) {
 		c.JSON(http.StatusOK, service.FailMsg("invalid token"))
 		return
 	}
-	file, _ := c.FormFile("file")
+	file, err := c.FormFile("file")
+	if err != nil {
+		log.Logger.Error(err)
+		c.JSON(http.StatusOK, service.FailMsg(err.Error()))
+		return
+	}
 	fileName := file.Filename
 	log.Logger.Debugf("fileName:%s", fileName)
 	c.SaveUploadedFile(file, fmt.Sprintf("%s/%s", config.GlobalConfig.File.FilePath, fileName))
 
-	err := service.UserService.UpdateAvatar(uid, fileName)
+	err = service.UserService.UpdateAvatar(uid, fileName)
 	if err != nil {
+		log.Logger.Error(err)
 		c.JSON(http.StatusOK, service.FailMsg(err.Error()))
 		return
 	}
