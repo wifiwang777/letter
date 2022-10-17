@@ -13,12 +13,12 @@ var (
 )
 
 type MysqlConfig struct {
-	Host         string `toml:"host"`         // 服务器地址:端口
-	Port         string `toml:"port"`         //:端口
-	Username     string `toml:"username"`     // 数据库用户名
-	Password     string `toml:"password"`     // 数据库密码
-	Config       string `toml:"config"`       // 高级配置
-	Dbname       string `toml:"dbName"`       // 数据库名
+	Host         string `toml:"host"`
+	Port         string `toml:"port"`
+	Username     string `toml:"username"`
+	Password     string `toml:"password"`
+	Config       string `toml:"config"`
+	Dbname       string `toml:"dbName"`
 	MaxIdleConns int    `toml:"maxIdleConns"` // 空闲中的最大连接数
 	MaxOpenConns int    `toml:"maxOpenConns"` // 打开到数据库的最大连接数
 }
