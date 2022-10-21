@@ -9,6 +9,7 @@ import (
 	"github.com/gorilla/websocket"
 	"net/http"
 	"strconv"
+	"strings"
 	"time"
 )
 
@@ -106,13 +107,8 @@ func (t *server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	//加载用户信息
-	query := r.URL.Query()
-	user, ok := query["uid"]
-	if !ok || len(user) == 0 {
-		log.Logger.Error("invalid user")
-		return
-	}
-	uid, err := strconv.Atoi(user[0])
+	user := strings.TrimPrefix(r.URL.Path, "/letter/ws/")
+	uid, err := strconv.Atoi(user)
 	if err != nil {
 		log.Logger.Error(err)
 		return
@@ -134,7 +130,7 @@ func (t *server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 func Run() {
 	go WsServer.Start()
 	wsAddr := config.GlobalConfig.Run.WebsocketAddr
-	http.Handle("/letter/ws", WsServer)
+	http.Handle("/letter/ws/", WsServer)
 	err := http.ListenAndServe(wsAddr, nil)
 	if err != nil {
 		log.Logger.Error(err)
