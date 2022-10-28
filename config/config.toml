@@ -23,3 +23,8 @@ publicKey = "035463d712ef4a9ffe48040eedfe86bf3203123d89c40f676149bb521949302db2"
 
 [file]
 filePath = "assets/file"
+
+[apollo]
+appId = "letter"
+ip = "http://localhost:8080"
+secretKey = "0582299fcfd244f0bc24a2321addc872"

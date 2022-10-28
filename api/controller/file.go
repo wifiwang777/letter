@@ -12,7 +12,7 @@ import (
 
 func GetFile(c *gin.Context) {
 	fileName := c.Param("fileName")
-	filePath := fmt.Sprintf("%s/%s", config.GlobalConfig.File.FilePath, fileName)
+	filePath := fmt.Sprintf("%s/%s", config.GlobalConfig.FileConfig.FilePath, fileName)
 	data, _ := os.ReadFile(filePath)
 	c.Writer.Write(data)
 }
@@ -31,7 +31,7 @@ func SaveFile(c *gin.Context) {
 	}
 	fileName := file.Filename
 	log.Logger.Debugf("fileName:%s", fileName)
-	c.SaveUploadedFile(file, fmt.Sprintf("%s/%s", config.GlobalConfig.File.FilePath, fileName))
+	c.SaveUploadedFile(file, fmt.Sprintf("%s/%s", config.GlobalConfig.FileConfig.FilePath, fileName))
 
 	err = service.UserService.UpdateAvatar(uid, fileName)
 	if err != nil {

@@ -129,7 +129,7 @@ func (t *server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 func Run() {
 	go WsServer.Start()
-	wsAddr := config.GlobalConfig.Run.WebsocketAddr
+	wsAddr := config.GlobalConfig.RunConfig.WebsocketAddr
 	http.Handle("/letter/ws/", WsServer)
 	err := http.ListenAndServe(wsAddr, nil)
 	if err != nil {

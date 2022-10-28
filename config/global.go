@@ -29,29 +29,36 @@ func (m *MysqlConfig) Dsn() string {
 }
 
 type LogConfig struct {
-	Path  string `toml:"path"`
-	Level string `toml:"level"`
+	Path  string `mapstructure:"path"`
+	Level string `mapstructure:"level"`
 }
 
 type Run struct {
-	Mode          string `toml:"mode"`
-	HttpAddr      string `toml:"httpAddr"`
-	WebsocketAddr string `toml:"websocketAddr"`
+	Mode          string `mapstructure:"mode"`
+	HttpAddr      string `mapstructure:"httpAddr"`
+	WebsocketAddr string `mapstructure:"websocketAddr"`
 }
 
 type JwtConfig struct {
-	PublicKey  string `toml:"publicKey"`
-	PrivateKey string `toml:"privateKey"`
+	PublicKey  string `mapstructure:"publicKey"`
+	PrivateKey string `mapstructure:"privateKey"`
 }
 
 type FileConfig struct {
-	FilePath string `toml:"filePath"`
+	FilePath string `mapstructure:"filePath"`
+}
+
+type ApolloConfig struct {
+	AppId     string `mapstructure:"appId"`
+	Ip        string `mapstructure:"ip"`
+	SecretKey string `mapstructure:"secretKey"`
 }
 
 type Server struct {
-	Mysql *MysqlConfig `toml:"mysql"`
-	Log   *LogConfig   `toml:"log"`
-	Run   *Run         `toml:"run"`
-	Jwt   *JwtConfig   `toml:"jwt"`
-	File  *FileConfig  `toml:"file"`
+	MysqlConfig  *MysqlConfig  `mapstructure:"mysql"`
+	LogConfig    *LogConfig    `mapstructure:"log"`
+	RunConfig    *Run          `mapstructure:"run"`
+	JwtConfig    *JwtConfig    `mapstructure:"jwt"`
+	FileConfig   *FileConfig   `mapstructure:"file"`
+	ApolloConfig *ApolloConfig `mapstructure:"apollo"`
 }

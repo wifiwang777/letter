@@ -36,7 +36,7 @@ func init() {
 		}
 	})
 
-	err = RefreshJwt(GlobalConfig.Jwt)
+	err = RefreshJwt(GlobalConfig.JwtConfig)
 	if err != nil {
 		panic(err)
 	}

@@ -18,7 +18,7 @@ func TestSign(t *testing.T) {
 }
 
 func TestVerify(t *testing.T) {
-	tokenStr := "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEwMDB9.50JcnincZUSwL7nGtjCS7MzE9kggMDDwDupTem4cDAjZdRGv4UNqCWaXWRSmhvEyP6LJXyp-0IqEfI6s1pVxpw"
+	tokenStr := "eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjF9.eZMNx6N5ouOYo2wMlnU1qkhZkEI3PtWqN36x9O_5EQ4"
 	claims, err := Verify(tokenStr)
 	if err != nil {
 		t.Error(err)

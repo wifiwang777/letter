@@ -19,7 +19,7 @@ func init() {
 		MaxBackups: 7,
 	}
 	var level zapcore.Level
-	switch config.GlobalConfig.Log.Level {
+	switch config.GlobalConfig.LogConfig.Level {
 	case "debug":
 		level = zap.DebugLevel
 	case "info":

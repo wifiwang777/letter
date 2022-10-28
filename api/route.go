@@ -13,7 +13,7 @@ import (
 var HttpServer *gin.Engine
 
 func init() {
-	if config.GlobalConfig.Run.Mode != "dev" {
+	if config.GlobalConfig.RunConfig.Mode != "dev" {
 		gin.SetMode(gin.ReleaseMode)
 	}
 	HttpServer = gin.Default()
