@@ -43,7 +43,7 @@ func init() {
 func Cors() gin.HandlerFunc {
 	corConf := cors.DefaultConfig()
 	corConf.AllowAllOrigins = true
-	corConf.AllowHeaders = append(corConf.AllowHeaders, "X-Token")
+	corConf.AllowHeaders = append(corConf.AllowHeaders, "*")
 	return cors.New(corConf)
 }
 
@@ -54,6 +54,10 @@ func JWTAuth(c *gin.Context) {
 		c.Abort()
 		return
 	}
+
+	//log.Logger.Debug("userAgent:", c.Request.UserAgent())
+	//log.Logger.Debug("header:", c.Request.Header)
+
 	claims, err := jwt.Verify(token)
 	if err != nil {
 		c.JSON(http.StatusOK, service.FailMsg(err.Error()))
