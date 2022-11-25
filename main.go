@@ -4,8 +4,7 @@ import (
 	"github.com/aisuosuo/letter/api"
 	"github.com/aisuosuo/letter/config"
 	"github.com/aisuosuo/letter/core/ws"
-
-	_ "github.com/aisuosuo/letter/config/apollo"
+	//_ "github.com/aisuosuo/letter/config/apollo"
 )
 
 func main() {

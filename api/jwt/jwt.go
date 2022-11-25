@@ -1,20 +1,14 @@
 package jwt
 
 import (
-	"fmt"
-	"github.com/aisuosuo/letter/config/apollo"
+	"github.com/aisuosuo/letter/config"
 	"github.com/golang-jwt/jwt/v4"
 )
 
 func Sign(claims jwt.MapClaims) (string, error) {
-	jwtSecretKey, err := apollo.GlobalApolloConfig.Get("jwt.secretKey")
-	if err != nil {
-		return "", err
-	}
-	key := []byte(jwtSecretKey.(string))
-	alg := jwt.GetSigningMethod("HS256")
+	alg := jwt.GetSigningMethod("ES256")
 	token := jwt.NewWithClaims(alg, claims)
-	signedString, err := token.SignedString(key)
+	signedString, err := token.SignedString(config.JwtPrivateKey.PrivateKey)
 	if err != nil {
 		return "", err
 	}
@@ -22,20 +16,10 @@ func Sign(claims jwt.MapClaims) (string, error) {
 }
 
 func Verify(tokenStr string) (jwt.MapClaims, error) {
-	jwtSecretKey, err := apollo.GlobalApolloConfig.Get("jwt.secretKey")
-	if err != nil {
-		return nil, err
-	}
-	key := []byte(jwtSecretKey.(string))
-	token, err := jwt.Parse(tokenStr, func(token *jwt.Token) (interface{}, error) {
-		// Don't forget to validate the alg is what you expect:
-		if _, ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
-			return nil, fmt.Errorf("unexpected signing method: %v", token.Header["alg"])
-		}
-
-		// hmacSampleSecret is a []byte containing your secret, e.g. []byte("my_secret_key")
-		return key, nil
-	})
+	token, err := jwt.Parse(tokenStr,
+		func(t *jwt.Token) (interface{}, error) {
+			return config.JwtPublicKey.PublicKey, nil
+		})
 	if err != nil {
 		return nil, err
 	}
