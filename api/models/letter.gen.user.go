@@ -59,7 +59,7 @@ func (obj *_UserMgr) WithUID(uid uint) Option {
 	return optionFunc(func(o *options) { o.query["uid"] = uid })
 }
 
-// WithName name获取
+// WithName name获取 用户名
 func (obj *_UserMgr) WithName(name string) Option {
 	return optionFunc(func(o *options) { o.query["name"] = name })
 }
@@ -69,7 +69,7 @@ func (obj *_UserMgr) WithPassword(password string) Option {
 	return optionFunc(func(o *options) { o.query["password"] = password })
 }
 
-// WithAvatar avatar获取
+// WithAvatar avatar获取 头像
 func (obj *_UserMgr) WithAvatar(avatar string) Option {
 	return optionFunc(func(o *options) { o.query["avatar"] = avatar })
 }
@@ -112,6 +112,29 @@ func (obj *_UserMgr) GetByOptions(opts ...Option) (results []*User, err error) {
 	return
 }
 
+// SelectPage 分页查询
+func (obj *_UserMgr) SelectPage(page IPage, opts ...Option) (resultPage IPage, err error) {
+	options := options{
+		query: make(map[string]interface{}, len(opts)),
+	}
+	for _, o := range opts {
+		o.apply(&options)
+	}
+	resultPage = page
+	results := make([]User, 0)
+	var count int64 // 统计总的记录数
+	query := obj.DB.WithContext(obj.ctx).Model(User{}).Where(options.query)
+	query.Count(&count)
+	resultPage.SetTotal(count)
+	if len(page.GetOrederItemsString()) > 0 {
+		query = query.Order(page.GetOrederItemsString())
+	}
+	err = query.Limit(int(page.GetSize())).Offset(int(page.Offset())).Find(&results).Error
+
+	resultPage.SetRecords(results)
+	return
+}
+
 //////////////////////////enume case ////////////////////////////////////////////
 
 // GetFromUID 通过uid获取内容
@@ -128,14 +151,14 @@ func (obj *_UserMgr) GetBatchFromUID(uids []uint) (results []*User, err error) {
 	return
 }
 
-// GetFromName 通过name获取内容
+// GetFromName 通过name获取内容 用户名
 func (obj *_UserMgr) GetFromName(name string) (result User, err error) {
 	err = obj.DB.WithContext(obj.ctx).Model(User{}).Where("`name` = ?", name).First(&result).Error
 
 	return
 }
 
-// GetBatchFromName 批量查找
+// GetBatchFromName 批量查找 用户名
 func (obj *_UserMgr) GetBatchFromName(names []string) (results []*User, err error) {
 	err = obj.DB.WithContext(obj.ctx).Model(User{}).Where("`name` IN (?)", names).Find(&results).Error
 
@@ -156,14 +179,14 @@ func (obj *_UserMgr) GetBatchFromPassword(passwords []string) (results []*User, 
 	return
 }
 
-// GetFromAvatar 通过avatar获取内容
+// GetFromAvatar 通过avatar获取内容 头像
 func (obj *_UserMgr) GetFromAvatar(avatar string) (results []*User, err error) {
 	err = obj.DB.WithContext(obj.ctx).Model(User{}).Where("`avatar` = ?", avatar).Find(&results).Error
 
 	return
 }
 
-// GetBatchFromAvatar 批量查找
+// GetBatchFromAvatar 批量查找 头像
 func (obj *_UserMgr) GetBatchFromAvatar(avatars []string) (results []*User, err error) {
 	err = obj.DB.WithContext(obj.ctx).Model(User{}).Where("`avatar` IN (?)", avatars).Find(&results).Error
 

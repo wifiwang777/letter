@@ -107,6 +107,29 @@ func (obj *_MessagesMgr) GetByOptions(opts ...Option) (results []*Messages, err 
 	return
 }
 
+// SelectPage 分页查询
+func (obj *_MessagesMgr) SelectPage(page IPage, opts ...Option) (resultPage IPage, err error) {
+	options := options{
+		query: make(map[string]interface{}, len(opts)),
+	}
+	for _, o := range opts {
+		o.apply(&options)
+	}
+	resultPage = page
+	results := make([]Messages, 0)
+	var count int64 // 统计总的记录数
+	query := obj.DB.WithContext(obj.ctx).Model(Messages{}).Where(options.query)
+	query.Count(&count)
+	resultPage.SetTotal(count)
+	if len(page.GetOrederItemsString()) > 0 {
+		query = query.Order(page.GetOrederItemsString())
+	}
+	err = query.Limit(int(page.GetSize())).Offset(int(page.Offset())).Find(&results).Error
+
+	resultPage.SetRecords(results)
+	return
+}
+
 //////////////////////////enume case ////////////////////////////////////////////
 
 // GetFromID 通过id获取内容
