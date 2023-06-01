@@ -20,6 +20,12 @@ func MessagesMgr(db *gorm.DB) *_MessagesMgr {
 	return &_MessagesMgr{_BaseMgr: &_BaseMgr{DB: db.Table("messages"), isRelated: globalIsRelated, ctx: ctx, cancel: cancel, timeout: -1}}
 }
 
+// Debug open debug.打开debug模式查看sql语句
+func (obj *_MessagesMgr) Debug() *_MessagesMgr {
+	obj._BaseMgr.DB = obj._BaseMgr.DB.Debug()
+	return obj
+}
+
 // GetTableName get sql table name.获取数据库名字
 func (obj *_MessagesMgr) GetTableName() string {
 	return "messages"

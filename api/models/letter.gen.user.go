@@ -20,6 +20,12 @@ func UserMgr(db *gorm.DB) *_UserMgr {
 	return &_UserMgr{_BaseMgr: &_BaseMgr{DB: db.Table("user"), isRelated: globalIsRelated, ctx: ctx, cancel: cancel, timeout: -1}}
 }
 
+// Debug open debug.打开debug模式查看sql语句
+func (obj *_UserMgr) Debug() *_UserMgr {
+	obj._BaseMgr.DB = obj._BaseMgr.DB.Debug()
+	return obj
+}
+
 // GetTableName get sql table name.获取数据库名字
 func (obj *_UserMgr) GetTableName() string {
 	return "user"
@@ -230,8 +236,8 @@ func (obj *_UserMgr) FetchByPrimaryKey(uid uint) (result User, err error) {
 	return
 }
 
-// FetchUniqueByUserNameUIndex primary or index 获取唯一内容
-func (obj *_UserMgr) FetchUniqueByUserNameUIndex(name string) (result User, err error) {
+// FetchUniqueByName primary or index 获取唯一内容
+func (obj *_UserMgr) FetchUniqueByName(name string) (result User, err error) {
 	err = obj.DB.WithContext(obj.ctx).Model(User{}).Where("`name` = ?", name).First(&result).Error
 
 	return

@@ -19,6 +19,12 @@ func UserFriendMgr(db *gorm.DB) *_UserFriendMgr {
 	return &_UserFriendMgr{_BaseMgr: &_BaseMgr{DB: db.Table("user_friend"), isRelated: globalIsRelated, ctx: ctx, cancel: cancel, timeout: -1}}
 }
 
+// Debug open debug.打开debug模式查看sql语句
+func (obj *_UserFriendMgr) Debug() *_UserFriendMgr {
+	obj._BaseMgr.DB = obj._BaseMgr.DB.Debug()
+	return obj
+}
+
 // GetTableName get sql table name.获取数据库名字
 func (obj *_UserFriendMgr) GetTableName() string {
 	return "user_friend"
