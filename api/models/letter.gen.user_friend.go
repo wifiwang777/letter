@@ -19,6 +19,12 @@ func UserFriendMgr(db *gorm.DB) *_UserFriendMgr {
 	return &_UserFriendMgr{_BaseMgr: &_BaseMgr{DB: db.Table("user_friend"), isRelated: globalIsRelated, ctx: ctx, cancel: cancel, timeout: -1}}
 }
 
+// Debug open debug.打开debug模式查看sql语句
+func (obj *_UserFriendMgr) Debug() *_UserFriendMgr {
+	obj._BaseMgr.DB = obj._BaseMgr.DB.Debug()
+	return obj
+}
+
 // GetTableName get sql table name.获取数据库名字
 func (obj *_UserFriendMgr) GetTableName() string {
 	return "user_friend"
@@ -93,6 +99,29 @@ func (obj *_UserFriendMgr) GetByOptions(opts ...Option) (results []*UserFriend, 
 
 	err = obj.DB.WithContext(obj.ctx).Model(UserFriend{}).Where(options.query).Find(&results).Error
 
+	return
+}
+
+// SelectPage 分页查询
+func (obj *_UserFriendMgr) SelectPage(page IPage, opts ...Option) (resultPage IPage, err error) {
+	options := options{
+		query: make(map[string]interface{}, len(opts)),
+	}
+	for _, o := range opts {
+		o.apply(&options)
+	}
+	resultPage = page
+	results := make([]UserFriend, 0)
+	var count int64 // 统计总的记录数
+	query := obj.DB.WithContext(obj.ctx).Model(UserFriend{}).Where(options.query)
+	query.Count(&count)
+	resultPage.SetTotal(count)
+	if len(page.GetOrederItemsString()) > 0 {
+		query = query.Order(page.GetOrederItemsString())
+	}
+	err = query.Limit(int(page.GetSize())).Offset(int(page.Offset())).Find(&results).Error
+
+	resultPage.SetRecords(results)
 	return
 }
 

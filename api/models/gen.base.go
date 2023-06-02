@@ -2,6 +2,7 @@ package models
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"time"
 
@@ -9,6 +10,11 @@ import (
 )
 
 var globalIsRelated bool = true // 全局预加载
+
+// IsNotFound ErrRecordNotFound
+func IsNotFound(err error) bool {
+	return errors.Is(err, gorm.ErrRecordNotFound)
+}
 
 // prepare for other
 type _BaseMgr struct {
@@ -47,6 +53,12 @@ func (obj *_BaseMgr) GetDB() *gorm.DB {
 	return obj.DB
 }
 
+// Debug open debug
+func (obj *_BaseMgr) Debug() *gorm.DB {
+	obj.DB = obj.DB.Debug()
+	return obj.DB
+}
+
 // UpdateDB update gorm.DB info
 func (obj *_BaseMgr) UpdateDB(db *gorm.DB) {
 	obj.DB = db
@@ -70,6 +82,11 @@ func (obj *_BaseMgr) New() {
 // NewDB new gorm.新gorm
 func (obj *_BaseMgr) NewDB() *gorm.DB {
 	return obj.DB.Session(&gorm.Session{NewDB: true, Context: obj.ctx})
+}
+
+// IsNotFound ErrRecordNotFound
+func (obj *_BaseMgr) IsNotFound(err error) bool {
+	return errors.Is(err, gorm.ErrRecordNotFound)
 }
 
 type options struct {

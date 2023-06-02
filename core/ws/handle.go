@@ -21,7 +21,7 @@ func (t *session) read() {
 		default:
 			_, message, err := t.conn.ReadMessage()
 			if err != nil {
-				log.Logger.Error(err)
+				log.Logger.Warn(err)
 				WsServer.disconnect <- t
 				return
 			}
@@ -41,7 +41,7 @@ func (t *session) write() {
 			message := <-t.writeCh
 			err := t.conn.WriteMessage(websocket.BinaryMessage, message)
 			if err != nil {
-				log.Logger.Error(err)
+				log.Logger.Warn(err)
 				return
 			}
 		}
