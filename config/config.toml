@@ -18,8 +18,7 @@ httpAddr = ":8085"
 websocketAddr = ":8086"
 
 [jwt]
-privateKey = "cf7a4d77e777b960edd996c7410c7704cb3b06dd94344275fcfa7a474dbd572e"
-publicKey = "035463d712ef4a9ffe48040eedfe86bf3203123d89c40f676149bb521949302db2"
+signKey = "1u9bhw7LpmLjaJvF"
 
 [file]
 filePath = "assets/file"

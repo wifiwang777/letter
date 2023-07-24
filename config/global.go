@@ -2,14 +2,12 @@ package config
 
 import (
 	"fmt"
-	"github.com/aisuosuo/ecdsa"
 )
 
 var (
-	GlobalConfig  Server
-	AppPath       string
-	JwtPublicKey  *ecdsa.PublicKey
-	JwtPrivateKey *ecdsa.PrivateKey
+	GlobalConfig Server
+	AppPath      string
+	JwtSignKey   []byte
 )
 
 type MysqlConfig struct {
@@ -40,8 +38,7 @@ type Run struct {
 }
 
 type JwtConfig struct {
-	PublicKey  string `mapstructure:"publicKey"`
-	PrivateKey string `mapstructure:"privateKey"`
+	SignKey string `mapstructure:"signKey"`
 }
 
 type FileConfig struct {

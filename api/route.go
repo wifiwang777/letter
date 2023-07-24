@@ -55,9 +55,6 @@ func JWTAuth(c *gin.Context) {
 		return
 	}
 
-	//log.Logger.Debug("userAgent:", c.Request.UserAgent())
-	//log.Logger.Debug("header:", c.Request.Header)
-
 	claims, err := jwt.Verify(token)
 	if err != nil {
 		c.JSON(http.StatusOK, service.FailMsg(err.Error()))

@@ -3,7 +3,6 @@ package config
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/aisuosuo/ecdsa"
 	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"
 	"os"
@@ -36,17 +35,6 @@ func init() {
 		}
 	})
 
-	err = RefreshJwt(GlobalConfig.JwtConfig)
-	if err != nil {
-		panic(err)
-	}
-
 	marshal, _ := json.Marshal(GlobalConfig)
 	fmt.Println(fmt.Sprintf("load config success:%s, config:%s", configPath, marshal))
-}
-
-func RefreshJwt(jwtConfig *JwtConfig) (err error) {
-	JwtPublicKey, err = ecdsa.NewPublicKeyFromHex(jwtConfig.PublicKey)
-	JwtPrivateKey, err = ecdsa.NewPrivateKeyFromHex(jwtConfig.PrivateKey)
-	return
 }

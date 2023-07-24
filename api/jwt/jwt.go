@@ -6,9 +6,8 @@ import (
 )
 
 func Sign(claims jwt.MapClaims) (string, error) {
-	alg := jwt.GetSigningMethod("ES256")
-	token := jwt.NewWithClaims(alg, claims)
-	signedString, err := token.SignedString(config.JwtPrivateKey.PrivateKey)
+	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
+	signedString, err := token.SignedString(config.JwtSignKey)
 	if err != nil {
 		return "", err
 	}
@@ -17,8 +16,8 @@ func Sign(claims jwt.MapClaims) (string, error) {
 
 func Verify(tokenStr string) (jwt.MapClaims, error) {
 	token, err := jwt.Parse(tokenStr,
-		func(t *jwt.Token) (interface{}, error) {
-			return config.JwtPublicKey.PublicKey, nil
+		func(token *jwt.Token) (i interface{}, e error) {
+			return config.JwtSignKey, nil
 		})
 	if err != nil {
 		return nil, err
