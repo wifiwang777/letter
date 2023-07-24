@@ -20,31 +20,31 @@ Content-Type: application/json
 
 ### info
 GET localhost:8085/user/info
-x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjF9.ixhRZ7oxecHuRdEGjsETfBSWJP3hDECoQ_j4082hoF4
+x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjJ9.TZAku0KHni0SUOGTBphCKlAaFXj_83NWAfKEPRKwOJw
 
 
 ### getFriends
 GET localhost:8085/user/getFriends
-x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjF9.ixhRZ7oxecHuRdEGjsETfBSWJP3hDECoQ_j4082hoF4
+x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjJ9.TZAku0KHni0SUOGTBphCKlAaFXj_83NWAfKEPRKwOJw
 
 ### searchFriend
 GET localhost:8085/user/searchUser?name=wf
-x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjF9.ixhRZ7oxecHuRdEGjsETfBSWJP3hDECoQ_j4082hoF4
+x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjJ9.TZAku0KHni0SUOGTBphCKlAaFXj_83NWAfKEPRKwOJw
 
 ### deleteFriend
 POST localhost:8085/user/deleteFriend
 Content-Type: application/json
-x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjF9.ixhRZ7oxecHuRdEGjsETfBSWJP3hDECoQ_j4082hoF4
+x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjJ9.TZAku0KHni0SUOGTBphCKlAaFXj_83NWAfKEPRKwOJw
 
 {
-  "uid": 10012
+  "uid": 1
 }
 
 ### addFriend
 POST localhost:8085/user/addFriend
 Content-Type: application/json
-x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjF9.ixhRZ7oxecHuRdEGjsETfBSWJP3hDECoQ_j4082hoF4
+x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjJ9.TZAku0KHni0SUOGTBphCKlAaFXj_83NWAfKEPRKwOJw
 
 {
-  "uid": 10021
+  "uid": 1
 }
