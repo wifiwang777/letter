@@ -76,9 +76,11 @@ func (t *server) Start() {
 				log.Logger.Warnf("message not specify receiver :%#v", message)
 				continue
 			}
-			err = service.UserService.AddMessage(uint(message.From), uint(message.To), message.Content)
-			if err != nil {
-				log.Logger.Warnf("insert to db err:%s", err.Error())
+			if message.Type == pb.MessageType_Msg {
+				err = service.UserService.AddMessage(uint(message.From), uint(message.To), message.Content)
+				if err != nil {
+					log.Logger.Warnf("insert to db err:%s", err.Error())
+				}
 			}
 			if sessions := t.sessions[message.To]; len(sessions) > 0 {
 				for _, s := range sessions {
@@ -125,6 +127,10 @@ func (t *server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	go s.read()
 	go s.write()
 	<-s.quit
+}
+
+func (t *server) ReceiveMessage(data []byte) {
+	t.message <- data
 }
 
 func Run() {
