@@ -6,6 +6,11 @@ option go_package = "/;pb";
 message Message {
   uint32 from = 1;
   uint32 to = 2;
-  uint32 type = 3;
+  MessageType type = 3;
   string content = 4;
+}
+
+enum MessageType {
+  Msg = 0;
+  Notify = 1;
 }
