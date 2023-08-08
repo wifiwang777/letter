@@ -97,8 +97,15 @@ func (t *userService) AcceptFriend(userId, friendId uint) error {
 }
 
 func (t *userService) DeleteFriend(userId, friendId uint) error {
-	userFriendMgr := models.UserFriendMgr(db.GetDB())
-	return userFriendMgr.Where("user_id", userId).Where("friend_id", friendId).Delete(&models.UserFriend{}).Error
+	return db.GetDB().Transaction(func(tx *gorm.DB) error {
+		if err := tx.Where("user_id", userId).Where("friend_id", friendId).Delete(&models.UserFriend{}).Error; err != nil {
+			return err
+		}
+		if err := tx.Where("user_id", friendId).Where("friend_id", userId).Delete(&models.UserFriend{}).Error; err != nil {
+			return err
+		}
+		return nil
+	})
 }
 
 func (t *userService) IsFriend(userId, friendId uint) bool {
